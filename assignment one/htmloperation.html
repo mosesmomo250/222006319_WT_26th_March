@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Operation</title>
+</head>
+<body>
+    <h1>Welcome to our mathematical operation</h1>
+    <h2>Click on the operation you need and enjoy</h2>
+    <a href="#" onclick="performOperation('addition')">Addition</a>
+    <a href="substraction.html">Subtraction</a>
+    <a href="multiplication.html">Multiplication</a>
+    <a href="division.html">Division</a>
+
+    <div id="result"></div>
+
+    <script>
+        function performOperation(operation) {
+            var num1 = parseFloat(prompt("Enter first number:"));
+            var num2 = parseFloat(prompt("Enter second number:"));
+            var result;
+
+            switch (operation) {
+                case 'addition':
+                    result = num1 + num2;
+                    break;
+                // Add cases for other operations if needed
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
